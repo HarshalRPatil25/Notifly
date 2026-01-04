@@ -1,5 +1,7 @@
 package com.notifly.backend.User.Entity;
 
+import java.time.LocalDate;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -33,10 +35,11 @@ private String email;
 @Size(min = 6, message = "Password must be at least 6 characters long")
 private String password;
 
-@NotBlank(message = "Role is mandatory")
+@NotBlank(message = "PhoneNumber is mandatory")
 private long phoneNumber;
 
-
+@NotBlank
+private LocalDate userCreationDate;
 
     
 }
