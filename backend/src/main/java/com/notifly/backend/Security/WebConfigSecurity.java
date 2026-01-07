@@ -32,7 +32,7 @@ public class WebConfigSecurity {
 
          http.authorizeHttpRequests(request->request.
             requestMatchers("/api/user/**").authenticated()
-            .requestMatchers("/api/newUser/**").permitAll()
+            .requestMatchers("/api/public/**").permitAll()
             .anyRequest().authenticated()
          );
          

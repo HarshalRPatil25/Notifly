@@ -7,7 +7,7 @@ import java.util.function.Function;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import com.notifly.backend.Security.UserDetailsServiceCustom;
+
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -18,14 +18,14 @@ import io.jsonwebtoken.security.Keys;
 public class JWTService {
 
     private static final String SECRET_KEY =
-            "mySuperSecretKeyForJwtWhichIsAtLeast32Chars";
+            "myNOTIFYSuperSecretKeyFYNJJJVSHBJHHJHgokuJIJISBBnarutoBBSBBBSBSHBUUBUBBorJwtWhichIsAtLeastsaitama32CharsHRDNBSKMBJKJKBJKNSKBJSNKNNSKJBluffySBSLKNSINJSIIKINN";
 
     private Key getSignKey() {
         return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
     }
 
     // 1️⃣ Generate Token
-    public String generateToken(UserDetailsServiceCustom userDetails) {
+    public String generateToken(UserDetails userDetails) {
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())

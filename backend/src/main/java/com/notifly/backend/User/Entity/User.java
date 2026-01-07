@@ -8,14 +8,20 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users", uniqueConstraints = {
+    @UniqueConstraint(columnNames = "email"),
+    @UniqueConstraint(columnNames = "username")
+})
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,10 +31,12 @@ public class User {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Integer id;
 
-@NotBlank(message = "Username is mandatory")
+@NotBlank(message = "Username is mandatory" )
+@Column(unique = true)
 private String username;
 
 @NotBlank(message = "Email is mandatory")
+@Column(unique = true)
 private String email;
 
 @NotBlank(message = "Password is mandatory")
@@ -36,9 +44,10 @@ private String email;
 private String password;
 
 @NotBlank(message = "PhoneNumber is mandatory")
+@Column(unique = true)
 private long phoneNumber;
 
-@NotBlank
+
 private LocalDate userCreationDate;
 
     
