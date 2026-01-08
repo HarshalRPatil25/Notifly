@@ -3,56 +3,78 @@ package com.notifly.backend.Security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
-import com.notifly.backend.Security.JWT.JwtAuthFilter; 
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
- 
-
+import com.notifly.backend.Security.JWT.JwtAuthFilter;
 @Configuration
 @EnableWebSecurity
 public class WebConfigSecurity {
 
-     @Autowired
+    @Autowired
     private JwtAuthFilter jwtAuthFilter;
 
+    @Autowired
+    private UserDetailsServiceCustom userDetailsServiceCustom;
 
     @Bean
-    public SecurityFilterChain securityFilerChain(HttpSecurity http)throws Exception{
-        // Disable CSRF protection
-        http.csrf(csrfToken->csrfToken.disable());
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder(12);
+    }
 
-        //Basic actions are enabled
-         http.httpBasic(Customizer.withDefaults());
-        
+    @Bean
+    public AuthenticationManager authenticationManager(
+            AuthenticationConfiguration config) throws Exception {
+        return config.getAuthenticationManager();
+    }
 
-         //Authenticating all requests
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider dao = new DaoAuthenticationProvider(userDetailsServiceCustom);
+     
+        dao.setPasswordEncoder(passwordEncoder());
+        return dao;
+    }
 
-         http.authorizeHttpRequests(request->request.
-            requestMatchers("/api/user/**").authenticated()
-            .requestMatchers("/api/public/**").permitAll()
-            .anyRequest().authenticated()
-         );
-         
-         http.addFilterBefore(jwtAuthFilter,
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+        http
+            // ❌ No CSRF for JWT
+            .csrf(csrf -> csrf.disable())
+
+            // ❌ No sessions for JWT
+            .sessionManagement(session ->
+                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            )
+
+            // ✅ Register authentication provider
+            .authenticationProvider(authenticationProvider())
+
+            // ✅ Authorization rules
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/api/public/**").permitAll()
+                .requestMatchers("/api/user/**").authenticated()
+                .anyRequest().authenticated()
+            )
+
+            // ✅ JWT filter
+            .addFilterBefore(jwtAuthFilter,
                     UsernamePasswordAuthenticationFilter.class);
-
-
-
 
         return http.build();
     }
-   
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
-        return authConfig.getAuthenticationManager();
-    }
-
 }

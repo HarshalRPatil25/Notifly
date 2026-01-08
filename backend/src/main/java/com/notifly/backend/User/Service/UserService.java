@@ -1,43 +1,40 @@
 package com.notifly.backend.User.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.notifly.backend.User.Entity.User;
 import com.notifly.backend.User.Repository.UserRepository;
 
 import jakarta.transaction.Transactional;
-
 @Service
 public class UserService {
 
+    @Autowired
+    private UserRepository userRepository;
 
-
-     @Autowired
-     private UserRepository userRepository;
-
-
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     @Transactional
     public boolean saveUser(User user) {
-      //Save user logic
-      if(user!=null){
-          // Prevent creating duplicate username
-          if(userRepository.existsByUsername(user.getUsername())){
-              return false; // caller should handle conflict (409)
-          }
 
-          User SavedUser=userRepository.save(user);
-          if(SavedUser!=null){
-              return true;
-          }
-      }
+        if (user == null) return false;
 
-      return false;
+        if (userRepository.existsByUsername(user.getUsername())) {
+            return false; // username conflict
+        }
+
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        userRepository.save(user);
+
+        return true;
     }
 
-    public boolean userExists(String username){
+    public boolean userExists(String username) {
         return userRepository.existsByUsername(username);
     }
-    
 }
+
