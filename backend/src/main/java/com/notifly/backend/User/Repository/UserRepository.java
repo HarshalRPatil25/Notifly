@@ -18,4 +18,8 @@ public interface UserRepository extends JpaRepository<User,Integer>{
 
     // If duplicates exist in DB, this returns all matches so callers can handle gracefully
     public List<User> findAllByUsername(String username);
+
+    public boolean existsByEmail(String email);
+
+    public boolean existsByPhoneNumber(String phoneNumber);
 } 

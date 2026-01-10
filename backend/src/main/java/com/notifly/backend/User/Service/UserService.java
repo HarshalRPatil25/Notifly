@@ -23,18 +23,12 @@ public class UserService {
 
         if (user == null) return false;
 
-        if (userRepository.existsByUsername(user.getUsername())) {
-            return false; // username conflict
-        }
-
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
 
         return true;
     }
 
-    public boolean userExists(String username) {
-        return userRepository.existsByUsername(username);
-    }
+ 
 }
 

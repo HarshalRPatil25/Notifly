@@ -17,8 +17,17 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JWTService {
 
-    private static final String SECRET_KEY =
-            "myNOTIFYSuperSecretKeyFYNJJJVSHBJHHJHgokuJIJISBBnarutoBBSBBBSBSHBUUBUBBorJwtWhichIsAtLeastsaitama32CharsHRDNBSKMBJKJKBJKNSKBJSNKNNSKJBluffySBSLKNSINJSIIKINN";
+    private static final String SECRET_KEY ="myNOTIFYSuperSecretKeyFYNJJJVSHBJHHJHgokuJIJISBBnarutoBBSBBBSBSkk"
+              + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwh"
+            + "HBUUBUBBorJwtWh*KAKASHI_HATAKEichIsAtLeastsaitama32CharsHRDNBSKM"
+              + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwh"
+                + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwh"
+            + "BJKJKBJKNSKBJSNKNNSKJBluffySBSLKNSINJSIIKINNBULMA_SHELODON_LEE_HHHBGGB"
+            + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwhBJKJKBJKNSKBJSNKNNSKJBluffySBSLKNSINJSIIKINNBULMA_SHELODON_LEE_HHHBGGB";
+
+    public static String getSecretKey() {
+        return SECRET_KEY;
+    }
 
     private Key getSignKey() {
         return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
