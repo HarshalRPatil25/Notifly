@@ -28,7 +28,8 @@ public class WhatsAppService {
     ).create();
 
 
-    System.out.println(msg.getAccountSid()+" "+msg.getErrorMessage()+" "+msg.getSid());
-}
+    // System.out.println(msg.getAccountSid()+" "+msg.getErrorMessage()+" "+msg.getSid());
+   }
+
 }
 
