@@ -1,13 +1,13 @@
 package com.notifly.backend.Security.JWT;
 
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.util.Date;
 import java.util.function.Function;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-
-
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -17,20 +17,13 @@ import io.jsonwebtoken.security.Keys;
 @Service
 public class JWTService {
 
-    private static final String SECRET_KEY ="myNOTIFYSuperSecretKeyFYNJJJVSHBJHHJHgokuJIJISBBnarutoBBSBBBSBSkk"
-              + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwh"
-            + "HBUUBUBBorJwtWh*KAKASHI_HATAKEichIsAtLeastsaitama32CharsHRDNBSKM"
-              + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwh"
-                + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwh"
-            + "BJKJKBJKNSKBJSNKNNSKJBluffySBSLKNSINJSIIKINNBULMA_SHELODON_LEE_HHHBGGB"
-            + "BBJbbjbsbbjhhddhwuyyyhhhdhdhdjhkhdkwkhdihwkkiiiukwhdkwhdhwhhudhuhwehuwiuiwuhhhhhhhhhdwjhdwudjwhBJKJKBJKNSKBJSNKNNSKJBluffySBSLKNSINJSIIKINNBULMA_SHELODON_LEE_HHHBGGB";
+    // Inject instance variable from env
+    @Value("${JWT_SECRET}")
+    private String secretKey;
 
-    public static String getSecretKey() {
-        return SECRET_KEY;
-    }
-
+    // Get signing key
     private Key getSignKey() {
-        return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+        return Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
     }
 
     // 1️⃣ Generate Token
