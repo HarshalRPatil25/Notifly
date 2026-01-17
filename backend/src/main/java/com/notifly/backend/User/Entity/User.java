@@ -47,6 +47,8 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
+    private boolean isMailVerified;
+
     @NotBlank
     @Size(min = 6)
     @Column(nullable = false)
@@ -57,6 +59,8 @@ public class User {
     @Column(name = "phone_number", nullable = false, unique = true)
     private String phoneNumber;
 
+    private boolean isMobileVerified;
+    
     private LocalDate userCreationDate;
 
     @PrePersist

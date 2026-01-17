@@ -50,7 +50,7 @@ public class UserCreationController {
     private AuthenticationManager authenticationManager;
 
 
-  @PostMapping("/*")
+  @PostMapping("/register")
 public ResponseEntity<ServiceRespose> registerUser(
         @Valid @RequestBody User user,
         BindingResult result

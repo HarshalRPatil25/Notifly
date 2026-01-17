@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.notifly.backend.User.Entity.User;
 import com.notifly.backend.User.Repository.UserRepository;
+import com.notifly.backend.Verification.OTP.OTPService;
 
 import jakarta.transaction.Transactional;
 @Service
@@ -19,7 +20,9 @@ public class UserService {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-
+      
+    @Autowired
+    private OTPService otpService;
     @Transactional
     public boolean saveUser(User user) {
 
@@ -33,23 +36,26 @@ public class UserService {
 
       @Transactional
     public boolean updateProfile(User user){
-        if(user==null){
-            return false;
-        }
-        if(userRepository.existsByUsername(user.getUsername())){
-            if(!userRepository.existsByEmail(user.getEmail())){
-                if(!userRepository.existsByPhoneNumber(user.getPhoneNumber())){
-                    Optional<User>exsitedUser=userRepository.findByUsername(user.getUsername());
-                    if(exsitedUser.get()!=null){
-                        exsitedUser.get().setPhoneNumber(user.getPhoneNumber());
-                        exsitedUser.get().setEmail(user.getEmail());
-                        userRepository.save(exsitedUser.get());
+         if(user!=null){
+            Optional<User>currentUser=userRepository.findByUsername(user.getUsername());
+            if(currentUser.get()!=null && currentUser.isEmpty()){
+            if(!(userRepository.existsByEmail(user.getEmail()))){
+                currentUser.get().setEmail(user.getEmail());;
+                currentUser.get().setMailVerified(false);
 
-                    }
-                }
             }
+            if(!(userRepository.existsByPhoneNumber(user.getPhoneNumber()))){
+                currentUser.get().setPhoneNumber(user.getPhoneNumber());
+                currentUser.get().setMobileVerified(false);
+             }
+             userRepository.save(currentUser.get());
+             return true;
+
+          }
+          return false;
         }
         return false;
+
     }
 
 public User getUserByUsername(String username){
@@ -62,5 +68,27 @@ public User getUserByUsername(String username){
    }
    return null;
 }
+
+public boolean verifyPhoneNumber(User user,String otp) {
+    
+    if(user!=null){
+        if(otp!=null && !(otp.isEmpty())){
+        boolean verified=otpService.verifyOtp(user.getPhoneNumber(), otp);
+        if(verified){
+            user.setMobileVerified(true);
+            userRepository.save(user);
+            return true;
+        }
+        return false;
+    
+       }
+       return false;
+    }
+    
+    return false;
+
+}
+
+
 
 }

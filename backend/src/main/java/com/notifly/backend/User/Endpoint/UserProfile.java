@@ -100,15 +100,27 @@ public class UserProfile {
 
     @PostMapping("/verify")
     public ResponseEntity<String> verifyOtp(@RequestBody VerifyOtpRequest req) {
+        Authentication auth=SecurityContextHolder.getContext().getAuthentication();
+        if(auth.isAuthenticated() && !(auth.getName().isBlank())){
+             Optional<User>existUser=userRepository.findByUsername(auth.getName());
+             if(existUser!=null){
+                    boolean verified = userService.verifyPhoneNumber(existUser.get(),req.getOtp());
 
-        boolean verified = otpService.verifyOtp(
-            req.getMobile(), req.getOtp());
 
-        if (verified)
-            return ResponseEntity.ok("Mobile verified successfully");
+                        if (verified){
+                            return ResponseEntity.ok("Mobile verified successfully");
 
-        return ResponseEntity.badRequest()
-            .body("Invalid or expired OTP");
+                        }
+                        else{
+                            return ResponseEntity.badRequest().body("Invalid or expired OTP");
+                        }
+                    }
+             
+            }
+                return ResponseEntity.status(401).body("Unauthorized");
+
+        
+       
     }
 
 

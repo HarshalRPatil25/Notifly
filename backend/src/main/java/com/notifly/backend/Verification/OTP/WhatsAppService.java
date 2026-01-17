@@ -14,22 +14,18 @@ public class WhatsAppService {
 
     private final TwilioProperties props;
 
-  public void sendOtp(String mobile, String otp) {
+   
 
-    if (otp == null || otp.isBlank()) {
-        throw new IllegalStateException("OTP is empty!");
+    public void sendOtp(String mobile, String otp) {
+
+        if (otp == null || otp.isBlank()) {
+            throw new IllegalStateException("OTP is empty!");
+        }
+
+        Message.creator(
+            new PhoneNumber("whatsapp:+91" + mobile),
+            new PhoneNumber(props.getWhatsappFrom()),
+            "Your OTP is " + otp + "\nValid for 5 minutes."
+        ).create();
     }
-    System.out.print("OTP "+otp);
-
-   Message msg= Message.creator(
-        new PhoneNumber("whatsapp:+91" + mobile),
-        new PhoneNumber(props.getWhatsappFrom()),
-        "Your OTP is " + otp + "\nValid for 5 minutes."
-    ).create();
-
-
-    // System.out.println(msg.getAccountSid()+" "+msg.getErrorMessage()+" "+msg.getSid());
-   }
-
 }
-
