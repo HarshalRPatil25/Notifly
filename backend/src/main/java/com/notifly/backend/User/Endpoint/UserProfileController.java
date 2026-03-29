@@ -1,27 +1,24 @@
 package com.notifly.backend.User.Endpoint;
 
-import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.notifly.backend.User.DTO.UserProfileDTO;
 import com.notifly.backend.User.Entity.User;
 import com.notifly.backend.User.Repository.UserRepository;
 import com.notifly.backend.User.Response.UserProfileRespose;
 import com.notifly.backend.User.Service.UserService;
 import com.notifly.backend.Verification.OTP.OTPService;
-import com.notifly.backend.Verification.OTP.VerifyOtpRequest;
+
 import com.notifly.backend.Verification.OTP.SMTP.OtpService;
 
 import lombok.RequiredArgsConstructor;
@@ -58,13 +55,20 @@ public class UserProfileController {
 
     @GetMapping
     public ResponseEntity<?> getProfile() {
-        User user = getCurrentUser();
-        if (user == null)
+        String user=getUsername();
+        if (user == null){
+
             return ResponseEntity.status(401).body("Unauthorized");
 
-        return ResponseEntity.ok(
-                new UserProfileRespose("200", "Profile fetched successfully", user)
+        }
+         UserProfileDTO users=userService.getUserProfile(user);
+         if(users!=null){
+             return ResponseEntity.ok(
+                new UserProfileRespose("200", "Profile fetched successfully", users)
         );
+         }
+     return ResponseEntity.status(401).body("Unauthorized");
+       
     }
 
     // ================= PHONE OTP =================
@@ -87,8 +91,8 @@ public class UserProfileController {
         if (user == null)
             return ResponseEntity.status(401).body("Unauthorized");
 
-        boolean verified = otpService.verifyOtp(
-                user.getPhoneNumber(), otp);
+        boolean verified = userService.verifyPhoneNumber(
+                user, otp);
 
         if (!verified)
             return ResponseEntity.badRequest().body("Invalid or expired OTP");
@@ -124,4 +128,6 @@ public class UserProfileController {
         
         return ResponseEntity.ok("Email verified successfully");
     }
+
+    
 }

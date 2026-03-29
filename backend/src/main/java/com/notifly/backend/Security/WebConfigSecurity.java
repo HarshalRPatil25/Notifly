@@ -67,7 +67,7 @@ public class WebConfigSecurity {
             // ✅ Authorization rules
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/public/**").permitAll()
-                .requestMatchers("/api/user/**").authenticated()
+                .requestMatchers("/api/**").authenticated()
                 .anyRequest().authenticated()
             )
 

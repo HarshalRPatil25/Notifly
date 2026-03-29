@@ -1,23 +1,17 @@
 package com.notifly.backend.User.Response;
 
-import com.notifly.backend.User.DTO.UserProfileDTO;
-import com.notifly.backend.User.Entity.User;
+import com.notifly.backend.User.DTO.UserDTO;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
-
-public class UserProfileRespose {
-
+@Setter
+public class UserResponse {
     private String statusCode;
-    private String message;
-    private UserProfileDTO user;
-    
+    private String meassage;
+    private UserDTO user;
 }

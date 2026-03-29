@@ -1,0 +1,412 @@
+2026-03-24 23:27:16 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:27:16 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:27:16 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:27:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:27:16 - Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:27:16 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:27:16 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:27:16 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:27:16 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:27:16 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:27:16 - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:27:16 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:27:16 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:27:16 - Starting service [Tomcat]
+2026-03-24 23:27:16 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:27:16 - Root WebApplicationContext: initialization completed in 448 ms
+2026-03-24 23:27:16 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:27:16 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:27:16 - HikariPool-6 - Starting...
+2026-03-24 23:27:16 - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9bae00e
+2026-03-24 23:27:16 - HikariPool-6 - Start completed.
+2026-03-24 23:27:16 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:27:17 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:27:17 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:27:17 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:27:17 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:27:17 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:27:17 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:27:17 - Started BackendApplication in 1.378 seconds (process running for 600.087)
+2026-03-24 23:27:17 - Condition evaluation unchanged
+2026-03-24 23:28:08 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:28:08 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:28:08 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:28:08 - Graceful shutdown complete
+2026-03-24 23:28:08 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:28:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:28:08 - HikariPool-6 - Shutdown initiated...
+2026-03-24 23:28:08 - HikariPool-6 - Shutdown completed.
+2026-03-24 23:28:08 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:28:08 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:28:08 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:28:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:28:08 - Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:28:08 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:28:08 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:28:08 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:28:08 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:28:08 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:28:08 - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:28:08 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:28:08 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:28:08 - Starting service [Tomcat]
+2026-03-24 23:28:08 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:28:08 - Root WebApplicationContext: initialization completed in 326 ms
+2026-03-24 23:28:08 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:28:08 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:28:08 - HikariPool-7 - Starting...
+2026-03-24 23:28:08 - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e0ff224
+2026-03-24 23:28:08 - HikariPool-7 - Start completed.
+2026-03-24 23:28:08 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:28:08 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:28:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:28:09 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:28:09 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:28:09 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:28:09 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:28:09 - Started BackendApplication in 1.105 seconds (process running for 651.746)
+2026-03-24 23:28:09 - Condition evaluation unchanged
+2026-03-24 23:29:00 - jobService called at 2026-03-24T23:29:00.000849575
+2026-03-24 23:29:00 - Starting Remotive job fetch for titles: [backend developer, Front-end developer, Java, Java, Full-Stack Developer]
+2026-03-24 23:29:00 - Calling Remotive API for keyword: backend developer
+2026-03-24 23:29:00 - Calling Remotive API for keyword: Front-end developer
+2026-03-24 23:29:00 - Calling Remotive API for keyword: Java
+2026-03-24 23:29:00 - Calling Remotive API for keyword: Java
+2026-03-24 23:29:00 - Calling Remotive API for keyword: Full-Stack Developer
+2026-03-24 23:29:00 - Remotive job fetch completed. Total jobs fetched: 5
+2026-03-24 23:29:00 - Starting Findwork job fetch for titles: [backend developer, Front-end developer, Java, Java, Full-Stack Developer]
+2026-03-24 23:29:00 - Calling Findwork API for keyword: backend developer
+2026-03-24 23:29:00 - Calling Findwork API for keyword: Front-end developer
+2026-03-24 23:29:00 - Calling Findwork API for keyword: Java
+2026-03-24 23:29:00 - Calling Findwork API for keyword: Java
+2026-03-24 23:29:00 - Calling Findwork API for keyword: Full-Stack Developer
+2026-03-24 23:29:00 - Findwork job fetch completed. Total jobs fetched: 22
+2026-03-24 23:29:00 - Job scraped successfully.
+2026-03-24 23:29:00 - Jobs Saved in database successfully.
+2026-03-24 23:30:25 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:30:25 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:30:25 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:25 - Graceful shutdown complete
+2026-03-24 23:30:25 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:25 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:30:25 - HikariPool-7 - Shutdown initiated...
+2026-03-24 23:30:25 - HikariPool-7 - Shutdown completed.
+2026-03-24 23:30:26 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:30:26 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:30:26 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:30:26 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:30:26 - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:30:26 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:30:26 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:30:26 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:30:26 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:30:26 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:30:26 - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:30:26 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:30:26 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:26 - Starting service [Tomcat]
+2026-03-24 23:30:26 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:30:26 - Root WebApplicationContext: initialization completed in 368 ms
+2026-03-24 23:30:26 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:30:26 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:30:26 - HikariPool-8 - Starting...
+2026-03-24 23:30:26 - HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14b6a695
+2026-03-24 23:30:26 - HikariPool-8 - Start completed.
+2026-03-24 23:30:26 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:30:26 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:30:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:30:26 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:30:27 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:30:27 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:27 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:30:27 - Started BackendApplication in 1.086 seconds (process running for 789.537)
+2026-03-24 23:30:27 - Condition evaluation unchanged
+2026-03-24 23:30:49 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:30:49 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:30:49 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:49 - Graceful shutdown complete
+2026-03-24 23:30:49 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:49 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:30:49 - HikariPool-8 - Shutdown initiated...
+2026-03-24 23:30:49 - HikariPool-8 - Shutdown completed.
+2026-03-24 23:30:49 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:30:49 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:30:49 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:30:49 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:30:49 - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:30:49 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:30:49 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:30:49 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:30:49 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:30:49 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:30:49 - Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:30:49 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:30:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:49 - Starting service [Tomcat]
+2026-03-24 23:30:49 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:30:50 - Root WebApplicationContext: initialization completed in 383 ms
+2026-03-24 23:30:50 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:30:50 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:30:50 - HikariPool-9 - Starting...
+2026-03-24 23:30:50 - HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63442403
+2026-03-24 23:30:50 - HikariPool-9 - Start completed.
+2026-03-24 23:30:50 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:30:50 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:30:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:30:50 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:30:50 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:30:50 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:30:50 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:30:50 - Started BackendApplication in 0.978 seconds (process running for 813.02)
+2026-03-24 23:30:50 - Condition evaluation unchanged
+2026-03-24 23:31:29 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:31:29 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:31:29 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:29 - Graceful shutdown complete
+2026-03-24 23:31:29 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:30 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:31:30 - HikariPool-9 - Shutdown initiated...
+2026-03-24 23:31:30 - HikariPool-9 - Shutdown completed.
+2026-03-24 23:31:30 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:31:30 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:31:30 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:31:30 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:31:30 - Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:31:30 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:31:30 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:31:30 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:31:30 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:31:30 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:31:30 - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:31:30 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:31:30 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:30 - Starting service [Tomcat]
+2026-03-24 23:31:30 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:31:30 - Root WebApplicationContext: initialization completed in 357 ms
+2026-03-24 23:31:30 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:31:30 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:31:30 - HikariPool-10 - Starting...
+2026-03-24 23:31:30 - HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79413dcb
+2026-03-24 23:31:30 - HikariPool-10 - Start completed.
+2026-03-24 23:31:30 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:31:30 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:31:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:31:30 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:31:31 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:31:31 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:31 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:31:31 - Started BackendApplication in 1.128 seconds (process running for 853.702)
+2026-03-24 23:31:31 - Condition evaluation unchanged
+2026-03-24 23:31:32 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:31:32 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:31:32 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:32 - Graceful shutdown complete
+2026-03-24 23:31:32 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:31:32 - HikariPool-10 - Shutdown initiated...
+2026-03-24 23:31:32 - HikariPool-10 - Shutdown completed.
+2026-03-24 23:31:32 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:31:32 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:31:32 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:31:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:31:32 - Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:31:32 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:31:32 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:31:32 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:31:32 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:31:32 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:31:32 - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:31:33 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:31:33 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:33 - Starting service [Tomcat]
+2026-03-24 23:31:33 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:31:33 - Root WebApplicationContext: initialization completed in 308 ms
+2026-03-24 23:31:33 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:31:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:31:33 - HikariPool-11 - Starting...
+2026-03-24 23:31:33 - HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43051262
+2026-03-24 23:31:33 - HikariPool-11 - Start completed.
+2026-03-24 23:31:33 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:31:33 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:31:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:31:33 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:31:33 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:31:33 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:31:33 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:31:33 - Started BackendApplication in 1.174 seconds (process running for 856.343)
+2026-03-24 23:31:33 - Condition evaluation unchanged
+2026-03-24 23:32:18 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:32:18 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:32:18 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:32:18 - Graceful shutdown complete
+2026-03-24 23:32:18 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:32:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:32:18 - HikariPool-11 - Shutdown initiated...
+2026-03-24 23:32:18 - HikariPool-11 - Shutdown completed.
+2026-03-24 23:32:24 - Starting BackendApplication using Java 21.0.10 with PID 80856 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:32:24 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:32:25 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:32:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:32:25 - Finished Spring Data repository scanning in 7 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:32:25 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:32:25 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:32:25 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:32:25 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:32:25 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:32:25 - Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:32:25 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:32:25 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:32:25 - Starting service [Tomcat]
+2026-03-24 23:32:25 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:32:25 - Root WebApplicationContext: initialization completed in 248 ms
+2026-03-24 23:32:25 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:32:25 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:32:25 - HikariPool-13 - Starting...
+2026-03-24 23:32:25 - HikariPool-13 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33db8a6b
+2026-03-24 23:32:25 - HikariPool-13 - Start completed.
+2026-03-24 23:32:25 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:32:25 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:32:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:32:25 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:32:25 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:32:25 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:32:25 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:32:25 - Started BackendApplication in 0.812 seconds (process running for 908.15)
+2026-03-24 23:32:25 - Condition evaluation unchanged
+2026-03-24 23:32:27 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:32:27 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:32:27 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:32:27 - Graceful shutdown complete
+2026-03-24 23:32:27 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:32:27 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:32:27 - HikariPool-13 - Shutdown initiated...
+2026-03-24 23:32:27 - HikariPool-13 - Shutdown completed.
+2026-03-24 23:34:02 - Starting BackendApplication using Java 21.0.10 with PID 92631 (/home/deku/HDD/Notifly/backend/target/classes started by deku in /home/deku/HDD/Notifly/backend)
+2026-03-24 23:34:02 - No active profile set, falling back to 1 default profile: "default"
+2026-03-24 23:34:02 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:34:02 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24 23:34:02 - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2026-03-24 23:34:02 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-24 23:34:02 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-24 23:34:02 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobPrefernceRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:34:02 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.JobPreferences.Repository.JobRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:34:02 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.notifly.backend.User.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-24 23:34:02 - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-03-24 23:34:02 - Tomcat initialized with port 8080 (http)
+2026-03-24 23:34:02 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:34:02 - Starting service [Tomcat]
+2026-03-24 23:34:02 - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-24 23:34:02 - Root WebApplicationContext: initialization completed in 752 ms
+2026-03-24 23:34:03 - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24 23:34:03 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24 23:34:03 - HikariPool-2 - Starting...
+2026-03-24 23:34:03 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b01fb56
+2026-03-24 23:34:03 - HikariPool-2 - Start completed.
+2026-03-24 23:34:03 - HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/notiflydb]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: notiflydb/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-24 23:34:03 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24 23:34:03 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:34:03 - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-24 23:34:04 - Exposing 1 endpoint beneath base path '/actuator'
+2026-03-24 23:34:04 - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:34:04 - Tomcat started on port 8080 (http) with context path '/'
+2026-03-24 23:34:04 - Started BackendApplication in 2.056 seconds (process running for 74.87)
+2026-03-24 23:34:04 - Condition evaluation unchanged
+2026-03-24 23:36:00 - === MailScheduler started ===
+2026-03-24 23:36:05 - Sent 16 jobs → harshalrp25@gmail.com
+2026-03-24 23:36:05 - === MailScheduler done | sent=1 skipped=0 failed=0 ===
+2026-03-24 23:36:46 - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-03-24 23:36:46 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-24 23:36:46 - Pausing ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:36:46 - Graceful shutdown complete
+2026-03-24 23:36:46 - Stopping ProtocolHandler ["http-nio-8080"]
+2026-03-24 23:36:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24 23:36:46 - HikariPool-2 - Shutdown initiated...
+2026-03-24 23:36:46 - HikariPool-2 - Shutdown completed.

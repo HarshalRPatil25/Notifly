@@ -1,6 +1,6 @@
 package com.notifly.backend.User.Entity;
 
-import org.springframework.stereotype.Component;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,6 +28,6 @@ public class CridentialVerfication {
     private boolean isNumberVerified = false;
 
     @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false) //owing
     private User user;
 }

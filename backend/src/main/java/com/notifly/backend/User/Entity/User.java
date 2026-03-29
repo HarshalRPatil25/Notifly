@@ -1,12 +1,18 @@
 package com.notifly.backend.User.Entity;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.notifly.backend.JobPreferences.Entity.JobPreference;
+
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
@@ -59,10 +65,24 @@ public class User {
     @Column(name = "phone_number", nullable = false, unique = true)
     private String phoneNumber;
 
+
+    @Column(name = "mail_notification_send",nullable =true)
+    private Long mailNotification;
+
+
+    @Column(name="whatsApp_notification_send",nullable =true)
+     private Long whatsAppNotification;
+
  
     private LocalDate userCreationDate;
-       @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
-    private CridentialVerfication cridentialVerfication;
+       @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)//inverse side
+    private CridentialVerfication cridentialVerfication; 
+
+
+
+@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+private List<JobPreference> jobPreference=new ArrayList<>();
+
 
     @PrePersist
     public void prePersist() {
